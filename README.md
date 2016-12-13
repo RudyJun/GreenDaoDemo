@@ -2,25 +2,25 @@
 
 #步骤：
 ##一、在module的build.gradle文件中配置
->1.apply plugin: 'org.greenrobot.greendao'<br />
+1.apply plugin: 'org.greenrobot.greendao'<br/>
 
->2. buildscript {<br />
-      repositories {<br />
-          mavenCentral()<br />
-      }<br />
-      dependencies {<br />
+2. buildscript {<br/>
+      repositories {<br/>
+          mavenCentral()<br/>
+      }<br/>
+      dependencies {<br/>
           //依赖greendao插件<br />
            classpath 'org.greenrobot:greendao-gradle-plugin:3.2.1'<br />
-      }<br />
-  }<br />
+      }<br/>
+  }<br/>
   
->3.greendao {
+<pre><code>3.greendao {
     schemaVersion 1
     //生成实体类的包路径
     daoPackage 'com.rudy.demo.greendao'
     //生成实体类的根目录
     targetGenDir 'src/main/java'
-}
+}</code></pre>
   
 >4.dependencies {
     compile 'org.greenrobot:greendao:3.2.0'
