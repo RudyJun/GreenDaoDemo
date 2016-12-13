@@ -15,7 +15,8 @@
   }</code></pre>
   
 <pre><code>3.greendao {
-    schemaVersion 1
+    //数据库版本
+    schemaVersion 1
     //生成实体类的包路径
     daoPackage 'com.rudy.demo.greendao'
     //生成实体类的根目录
