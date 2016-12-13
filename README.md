@@ -2,17 +2,17 @@
 
 #步骤：
 ##一、在module的build.gradle文件中配置
-1.apply plugin: 'org.greenrobot.greendao'<br/>
+<pre><code>1.apply plugin: 'org.greenrobot.greendao'</code></pre>
 
-2. buildscript {<br/>
-      repositories {<br/>
-          mavenCentral()<br/>
+<pre><code>2. buildscript {
+      repositories {
+          mavenCentral()
       }<br/>
-      dependencies {<br/>
-          //依赖greendao插件<br />
+      dependencies {
+          //依赖greendao插件
            classpath 'org.greenrobot:greendao-gradle-plugin:3.2.1'<br />
-      }<br/>
-  }<br/>
+      }
+  }</code></pre>
   
 <pre><code>3.greendao {
     schemaVersion 1
@@ -22,21 +22,21 @@
     targetGenDir 'src/main/java'
 }</code></pre>
   
->4.dependencies {
+<pre><code>4.dependencies {
     compile 'org.greenrobot:greendao:3.2.0'
-  }
+  }</code></pre>
   
 ##二、使用注解方式创建实体类（举例）
->@Entity
->public class Student {
->//Id 默认为主键，自增方式
->    @Id
->    private Long id;
->    private String name;
->    private int age;
->    private String sex;
->    private String grade;
->    }
+<pre><code>@Entity
+public class Student {
+//Id 默认为主键，自增方式
+    @Id
+    private Long id;
+    private String name;
+    private int age;
+    private String sex;
+    private String grade;
+    }</code></pre>
     
 ##三、在AndroidStudio的Build菜单中进行Make Project后，在目标包中生成DaoMaster、DaoSession、StudentDao（有多少个实体类就有多少个Dao文件）
 
